@@ -11,16 +11,17 @@ class Simulation:
 
     def run(self, shots=1024):
 
-        compiled = transpile(
-            self.circuit,
-            self.backend,
-        )
+            compiled = transpile(
+                self.circuit,
+                self.backend,
+            )
 
-        job = self.backend.run(
-            compiled,
-            shots=shots,
-        )
+            job = self.backend.run(
+                compiled,
+                shots=shots,
+            )
 
-        result = job.result()
+            counts = job.result().get_counts()
 
-        return result.get_counts()
+            return counts
+

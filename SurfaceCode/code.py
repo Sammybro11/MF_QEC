@@ -26,11 +26,11 @@ class BaconShorCode:
         ]
 
         self.logical_x = [
-            # Fill later
+            [0,1,2]
         ]
 
         self.logical_z = [
-            # Fill later
+            [2,5,8]
         ]
 
     def syndrome_table(self):
